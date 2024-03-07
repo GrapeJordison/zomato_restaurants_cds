@@ -206,7 +206,7 @@ df = df.loc[lins, :]
 
 
 # Filtros tipos de culinária
-cuisines_list = list(df.loc[: ,'first_cuisines'].sort_values().unique())
+cuisines_list = list(df.loc[: ,'first_cuisines'].unique().sort_values())
 lins = df['first_cuisines'].isin(cuisines_list)
 df = df.loc[lins, :]
 

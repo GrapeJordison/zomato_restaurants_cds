@@ -158,7 +158,7 @@ def most_expensive_cuisines(df):
 def best_rating_cuisines(df):
     df_aux = df.loc[:, ['first_cuisines','country_name','aggregate_rating','restaurant_id']].groupby(['first_cuisines','country_name','aggregate_rating']).count().sort_values('aggregate_rating', ascending=False).reset_index()                                                                                                   
     df_aux.columns=['Tipos_de_culinárias','Países', 'Média_notas_avaliações','Quantidade_restaurantes']
-    df_aux = df_aux.head(10)
+    df_aux = df_aux.head(20)
     fig = px.bar(df_aux, x='Tipos_de_culinárias', y='Média_notas_avaliações', title='Médias das notas das avaliações registradas por tipo de culinária')
     
     return df_aux

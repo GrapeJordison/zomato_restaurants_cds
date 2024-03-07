@@ -347,23 +347,26 @@ with st.container():
 
 st.markdown("""---""")    
 
-
 with st.container():
-    col1, col2, col3 = st.columns(3)
-    
-with col1:
-    # 11. Qual o tipo de culinária que possui o maior valor médio de um prato para duas pessoas?
-    col1.plotly_chart(most_expensive_cuisines(df), use_container_width=True)
-    col1.markdown(' ###### Informações do valor removido da média aparada \n País: Austrália Custo do prato para dois (dólar): 25.000.017,00 / ID do restaurante: 16608070 / Culinária: Modern Australian')
 
-with col2:
     # 12. Qual o tipo de culinária que possui a maior nota média?   
     col2.markdown(' #### Médias das notas das avaliações registradas por tipo de culinária')
     col2.dataframe(best_rating_cuisines(df), use_container_width=True)
 
-with col3:
-    # 13. Qual o tipo de culinária que possui mais restaurantes que aceitam pedidos online e fazem entregas?  
-    col3.plotly_chart(cuisines_online_booking(df), use_container_width=True)
+st.markdown("""---""")   
+
+with st.container():
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        # 11. Qual o tipo de culinária que possui o maior valor médio de um prato para duas pessoas?
+        col1.plotly_chart(most_expensive_cuisines(df), use_container_width=True)
+        col1.markdown(' ###### Informações do valor removido da média aparada \n País: Austrália Custo do prato para dois (dólar): 25.000.017,00 / ID do restaurante: 16608070 / Culinária: Modern Australian')
+
+
+    with col3:
+        # 13. Qual o tipo de culinária que possui mais restaurantes que aceitam pedidos online e fazem entregas?  
+        col3.plotly_chart(cuisines_online_booking(df), use_container_width=True)
 
 st.markdown("""---""")  
 

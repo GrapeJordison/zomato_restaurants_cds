@@ -282,6 +282,8 @@ with st.container():
         
         # 1. Qual o nome da cidade que possui mais restaurantes registrados?
         st.plotly_chart(restaurants_by_city(df), use_content_width=True)
+        
+     st.markdown("""---""") 
 
     with st.container():
         col1, col2 = st.columns(2)
@@ -293,6 +295,8 @@ with st.container():
         with col2:
             # 3. Qual o nome da cidade que possui mais restaurantes com nota média abaixo de 2.5?
             col2.plotly_chart(restaurant_price_tag_2_5_by_city(df), use_content_width=True)
+            
+     st.markdown("""---""") 
 
     with st.container():
         with col1:
@@ -303,6 +307,8 @@ with st.container():
         with col2:
             # 5. Qual o nome da cidade que possui a maior quantidade de tipos de culinária distintas?
             col2.plotly_chart(cuisines_by_city(df), use_content_width=True)
+            
+    st.markdown("""---""")    
             
     with st.container():
         with col1:

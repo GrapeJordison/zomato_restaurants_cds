@@ -159,7 +159,7 @@ def best_rating_cuisines(df):
     df_aux = df.loc[:, ['first_cuisines','aggregate_rating']].groupby(['first_cuisines']).mean().sort_values('aggregate_rating', ascending=False).reset_index()                                                                                                   
     df_aux.columns=['Tipos_de_culinárias', 'Média_notas_avaliações']
     df_aux = df_aux.head(10)
-    fig = px.bar(df_aux, x='Tipos_de_culinárias', y='Média_notas_avaliações', title='Médias das notas das avaliações registradas por tipo de culinária')
+    fig = px.bar(df_aux, x='Tipos_de_culinárias', y='Média_notas_avaliações', title='Médias das notas das avaliações registradas por tipo de culinária', text_auto=True)
     
     return fig
 

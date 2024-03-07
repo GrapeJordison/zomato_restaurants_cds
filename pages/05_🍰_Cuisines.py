@@ -161,7 +161,7 @@ def best_rating_cuisines(df):
     df_aux = df_aux.head(20)
     fig = px.bar(df_aux, x='Tipos_de_culinárias', y='Média_notas_avaliações', title='Médias das notas das avaliações registradas por tipo de culinária', color='Países')
     
-    return df_aux
+    return fig
 
 
 def cuisines_online_booking(df):
@@ -349,15 +349,7 @@ with st.container():
 st.markdown("""---""")    
 
 with st.container():
-
-    # 12. Qual o tipo de culinária que possui a maior nota média?   
-    st.markdown(' #### Médias das notas das avaliações registradas por tipo de culinária')
-    st.dataframe(best_rating_cuisines(df), use_container_width=True)
-
-st.markdown("""---""")   
-
-with st.container():
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
     
     with col1:
         # 11. Qual o tipo de culinária que possui o maior valor médio de um prato para duas pessoas?
@@ -365,8 +357,13 @@ with st.container():
         col1.markdown(' ###### Informações do valor removido da média aparada \n País: Austrália Custo do prato para dois (dólar): 25.000.017,00 / ID do restaurante: 16608070 / Culinária: Modern Australian')
 
     with col2:
+        # 12. Qual o tipo de culinária que possui a maior nota média?   
+        # st.markdown(' #### Médias das notas das avaliações registradas por tipo de culinária')
+        col2.plotly_chart(best_rating_cuisines(df), use_container_width=True)
+    
+    with col3:
         # 13. Qual o tipo de culinária que possui mais restaurantes que aceitam pedidos online e fazem entregas?  
-        col2.plotly_chart(cuisines_online_booking(df), use_container_width=True)
+        col3.plotly_chart(cuisines_online_booking(df), use_container_width=True)
 
 st.markdown("""---""")  
 

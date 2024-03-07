@@ -156,7 +156,7 @@ def most_expensive_cuisines(df):
 
 
 def best_rating_cuisines(df):
-    df_aux = df.loc[:, ['first_cuisines','aggregate_rating','restaurant_id','votes']].groupby(['first_cuisines','aggregate_rating']).agg({'restaurant_id':['count'],'votes':['sum']}.sort_values('aggregate_rating', ascending=False).reset_index()
+    df_aux = df.loc[:, ['first_cuisines','aggregate_rating','restaurant_id','votes']].groupby(['first_cuisines','aggregate_rating']).agg({'restaurant_id':['count'],'votes':['sum']}.sort_values('aggregate_rating', ascending=False)
     df_aux = df_aux.head(10)
     df_aux.columns=['Tipos_de_culinárias', 'Média_notas_avaliações','Quantidade_restaurantes','Quantidade_avaliações']
     df_aux = df_aux.reset_index()

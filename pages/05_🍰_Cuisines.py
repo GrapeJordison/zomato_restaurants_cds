@@ -206,8 +206,7 @@ df = df.loc[lins, :]
 
 
 # Filtros tipos de culinária
-#cuisines_list = df['first_cuisines'].sort_values('first_cuisines', ascending=True)
-cuisines_list = list(df.loc[: ,'first_cuisines'].unique())
+cuisines_list = list(df.loc[: ,'first_cuisines'].sort_values().unique())
 lins = df['first_cuisines'].isin(cuisines_list)
 df = df.loc[lins, :]
 
@@ -368,7 +367,6 @@ with st.container():
 
 st.markdown("""---""")  
 
-# st.dataframe(df.loc[:,'restaurant_id'].sort_values('restaurant_id', ascending=True)
 
 
 

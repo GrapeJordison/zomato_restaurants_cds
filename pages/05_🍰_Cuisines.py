@@ -151,7 +151,7 @@ def most_expensive_cuisines(df):
     df_aux = df.loc[lins, ['first_cuisines','average_cost_for_two_dolar','country_name']].groupby(['first_cuisines','country_name']).mean().sort_values('average_cost_for_two_dolar', ascending=False).reset_index()
     df_aux = df_aux.head(10)
     df_aux.columns=['Tipos_de_culinárias', 'Países', 'Custo_prato_para_dois']
-    fig = px.bar(df_aux, x='Tipos_de_culinárias', y='Custo_prato_para_dois', color='Países', title='Média aparada do custo do prato para dois por tipo de culinária (dólar)')
+    fig = px.bar(df_aux, x='Tipos_de_culinárias', y='Custo_prato_para_dois', color='Países', title='Média aparada do custo do prato para dois por tipo de culinária (dólar)', text_auto=True)
     return fig
 
 
@@ -168,7 +168,7 @@ def cuisines_online_booking(df):
     df_aux = df.loc[lins, ['first_cuisines','country_name','restaurant_id']].groupby(['first_cuisines','country_name']).count().sort_values('restaurant_id', ascending=False).reset_index()
     df_aux = df_aux.head(10)
     df_aux.columns=['Tipos_de_culinárias', 'Países', 'Quantidade_restaurantes']
-    fig = px.bar(df_aux, x='Tipos_de_culinárias', y='Quantidade_restaurantes', color='Países', title='Tipos de culinárias com mais restaurantes que aceitam pedidos online e fazem entregas')
+    fig = px.bar(df_aux, x='Tipos_de_culinárias', y='Quantidade_restaurantes', color='Países', title='Tipos de culinárias com mais restaurantes que aceitam pedidos online e fazem entregas', text_auto=True)
     return fig
 
 

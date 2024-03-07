@@ -153,7 +153,7 @@ def restaurants_by_city(df):
     df_aux = df.loc[:, ['city','restaurant_id','country_name']].groupby(['city','country_name']).count().sort_values('restaurant_id', ascending=False).reset_index()
     df_aux.columns=['Cidades','Países', 'Quantidade de restaurantes']
     df_aux = df_aux.head(25)
-    fig = px.bar(df_aux, x='Cidades', y='Quantidade de restaurantes', title='Restaurantes por cidade', color='Países')
+    fig = px.bar(df_aux, x='Cidades', y='Quantidade de restaurantes', title='Restaurantes por cidade', color='Países', text_auto=True)
     return fig
 
 # 2. Qual o nome da cidade que possui mais restaurantes com nota média acima de 4?
@@ -163,7 +163,7 @@ def restaurant_price_tag_4_by_city(df):
 ['city','restaurant_id','aggregate_rating','country_name']].groupby(['city','country_name']).count().sort_values('aggregate_rating', ascending=False).reset_index()
     df_aux.columns=['Cidades','Países', 'Quantidade de restaurantes','Média das avaliações']
     df_aux = df_aux.head(7)
-    fig = px.bar(df_aux, x='Cidades', y='Quantidade de restaurantes', title='Restaurantes com nota média acima de 4 por cidade', color='Países')
+    fig = px.bar(df_aux, x='Cidades', y='Quantidade de restaurantes', title='Restaurantes com nota média acima de 4 por cidade', color='Países', text_auto=True)
     return fig
 
 
@@ -173,7 +173,7 @@ def restaurant_price_tag_2_5_by_city(df):
     df_aux = df.loc[lins, ['city','aggregate_rating','restaurant_id','country_name']].groupby(['city','country_name']).count().sort_values('aggregate_rating', ascending=False).reset_index()
     df_aux.columns=['Cidades','Países', 'Quantidade de restaurantes','Média das avaliações']
     df_aux = df_aux.head(7)
-    fig = px.bar(df_aux, x='Cidades', y='Quantidade de restaurantes', title='Restaurantes com nota média abaixo de 2.5 por cidade', color='Países')
+    fig = px.bar(df_aux, x='Cidades', y='Quantidade de restaurantes', title='Restaurantes com nota média abaixo de 2.5 por cidade', color='Países', text_auto=True)
     return fig
 
 
@@ -185,7 +185,7 @@ def expensiver_average_cost_for_two_city(df):
 ['city','average_cost_for_two_dolar','country_name']].groupby(['city','country_name']).mean('average_cost_for_two_dolar').sort_values('average_cost_for_two_dolar', ascending=False).reset_index()
     df_aux.columns=['Cidades','Países', 'Média custo prato para dois (dólar)']    
     df_aux = df_aux.head(10)
-    fig = px.bar(df_aux, x='Cidades', y='Média custo prato para dois (dólar)', title='Maiores preços médios de pratos para dois por cidade (dólar)', color='Países')
+    fig = px.bar(df_aux, x='Cidades', y='Média custo prato para dois (dólar)', title='Maiores preços médios de pratos para dois por cidade (dólar)', color='Países', text_auto=True)
     return fig
 
 
@@ -195,7 +195,7 @@ def cuisines_by_city(df):
     df_aux = df.loc[:, ['city','first_cuisines','country_name']].groupby(['city','country_name']).nunique().sort_values('first_cuisines', ascending=False).reset_index()
     df_aux.columns=['Cidades','Países', 'Tipos de culinária']
     df_aux = df_aux.head(10)
-    fig = px.bar(df_aux, x='Cidades', y='Tipos de culinária', title='Tipos de culinária por cidade', color='Países')
+    fig = px.bar(df_aux, x='Cidades', y='Tipos de culinária', title='Tipos de culinária por cidade', color='Países', text_auto=True)
     return fig
 
 
@@ -207,7 +207,7 @@ def restaurants_has_booking_by_city(df):
     df_aux = df.loc[lins, ['has_table_booking','city','restaurant_id','country_name']].groupby(['city','country_name']).count().sort_values('restaurant_id', ascending=False).reset_index()   
     df_aux.columns=['Cidades','Países', 'Faz reservas','Quantidade de restaurantes']
     df_aux = df_aux.head(10)
-    fig = px.bar(df_aux, x='Cidades', y='Quantidade de restaurantes', title='Restaurantes que fazem reservas por cidade', color='Países')
+    fig = px.bar(df_aux, x='Cidades', y='Quantidade de restaurantes', title='Restaurantes que fazem reservas por cidade', color='Países', text_auto=True)
     return fig
 
 #8. Qual o nome da cidade que possui a maior quantidade de restaurantes que aceitam pedidos online?
@@ -217,7 +217,7 @@ def restaurants_has_online_delivery_by_city(df):
     df_aux = df.loc[lins, ['has_online_delivery','city','country_name']].groupby(['city','country_name']).count().sort_values('has_online_delivery', ascending=False).reset_index()  
     df_aux.columns=['Cidades','Países', 'Faz entregas online']
     df_aux = df_aux.head(10)
-    fig = px.bar(df_aux, x='Cidades', y='Faz entregas online', title='Restaurantes que fazem entregas online por cidade', color='Países')
+    fig = px.bar(df_aux, x='Cidades', y='Faz entregas online', title='Restaurantes que fazem entregas online por cidade', color='Países', text_auto=True)
     return fig
 
 

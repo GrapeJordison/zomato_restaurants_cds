@@ -303,7 +303,8 @@ with st.container():
         with col2:
             # 5. Qual o nome da cidade que possui a maior quantidade de tipos de culinária distintas?
             col2.plotly_chart(cuisines_by_city(df), use_content_width=True)
-
+            
+    with st.container():
         with col1:
             # 6. Qual o nome da cidade que possui a maior quantidade de restaurantes que fazem reservas?
             # 7. Qual o nome da cidade que possui a menor quantidade de restaurantes que fazem entregas?

@@ -206,8 +206,8 @@ df = df.loc[lins, :]
 
 
 # Filtros tipos de culinária
-cuisines_list = df['first_cuisines'].sort_values('first_cuisines', ascending=True)
-cuisines_list = list(cuisines_list.loc[: ,'first_cuisines'].unique())
+#cuisines_list = df['first_cuisines'].sort_values('first_cuisines', ascending=True)
+cuisines_list = list(df.loc[: ,'first_cuisines'].unique())
 lins = df['first_cuisines'].isin(cuisines_list)
 df = df.loc[lins, :]
 
@@ -367,6 +367,8 @@ with st.container():
         col3.plotly_chart(cuisines_online_booking(df), use_container_width=True)
 
 st.markdown("""---""")  
+
+st.dataframe(df.loc[:,'first_cuisines'].sort_values('first_cuisines', ascending=True)
 
 
 

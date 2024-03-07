@@ -287,7 +287,6 @@ with st.container():
     with st.container():
         st.markdown("""---""")
         col1, col2 = st.columns(2)
-        
         with col1:
             # 2. Qual o nome da cidade que possui mais restaurantes com nota média acima de 4?
             col1.plotly_chart(restaurant_price_tag_4_by_city(df), use_content_width=True)
@@ -299,6 +298,7 @@ with st.container():
 
     with st.container():
         st.markdown("""---""") 
+        col1, col2 = st.columns(2)
         with col1:
             # 4. Qual o nome da cidade que possui o maior valor médio de um prato para dois?
             col1.plotly_chart(expensiver_average_cost_for_two_city(df), use_content_width=True)
@@ -311,6 +311,7 @@ with st.container():
 
     with st.container():
         st.markdown("""---""")
+        col1, col2 = st.columns(2)
         with col1:
             # 6. Qual o nome da cidade que possui a maior quantidade de restaurantes que fazem reservas?
             # 7. Qual o nome da cidade que possui a menor quantidade de restaurantes que fazem entregas?

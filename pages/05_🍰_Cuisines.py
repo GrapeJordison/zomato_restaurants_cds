@@ -368,7 +368,7 @@ with st.container():
 
 st.markdown("""---""")  
 
-st.dataframe(df.loc[:,'first_cuisines'].sort_values('first_cuisines', ascending=True)
+st.dataframe(df.loc[:,'restaurant_id'].sort_values('restaurant_id', ascending=True)
 
 
 

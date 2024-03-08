@@ -1,4 +1,4 @@
-# fome_zero_cds
+# zomato_restaurants_cds 
 This dashboard was a student project mine using a dataset from kaggle > https://www.kaggle.com/datasets/akashram/zomato-restaurants-autoupdated-dataset?resource=download&amp;select=zomato.csv
 
 Cenário fictício usado para criação do dashboard durante a aula.

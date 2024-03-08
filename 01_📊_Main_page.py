@@ -214,7 +214,7 @@ with st.sidebar.container():
     with st.sidebar.container():
 
         # Informações barra lateral
-        st.sidebar.write('# Fome Zero')
+        st.sidebar.write('# Zomato Restaurants')
         # Imagem da barra lateral
         image = Image.open('logo.png')
         st.sidebar.image(image, width=80)
@@ -260,8 +260,8 @@ with st.sidebar.container():
 # Layout Sreamlit
 # ====================================================
 
-st.markdown(' # Projeto Fome Zero')
-st.markdown('###### Fonte: Zomato Restaurants - Autoupdated dataset - Kaggle Dataset')
+st.markdown(' # Zomato Restaurants')
+st.markdown('###### Fonte: https://www.kaggle.com/datasets/akashram/zomato-restaurants-autoupdated-dataset?resource=download&amp%3Bselect=zomato.csv')
 st.markdown("""---""")   
 st.markdown('#### Temos as seguintes marcas dentro da nossa plataforma:') 
 

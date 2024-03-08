@@ -263,7 +263,7 @@ with st.sidebar.container():
 st.markdown(' # Zomato Restaurants')
 st.markdown('###### Fonte: https://www.kaggle.com/datasets/akashram/zomato-restaurants-autoupdated-dataset?resource=download&amp%3Bselect=zomato.csv')
 st.markdown("""---""")   
-st.markdown('#### Temos as seguintes marcas dentro da nossa plataforma:') 
+st.markdown('#### Visão Geral:') 
 
 with st.container():
     

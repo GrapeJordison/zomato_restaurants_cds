@@ -153,7 +153,7 @@
   - Média das notas das avaliações registradas por tipo de culinária
   - Tipos de culinárias com mais restaurantes  
 
-### 4. Top 3 Insights de dados
+### 4. Insights de dados
   1. A Zomato está presente nos cinco continentes;
   2. A maioria dos restaurantes está localizado na Índia ou Estados Unidos;
   3. Índia e Emirados Arábes possuem a maior diversidade de culinárias;

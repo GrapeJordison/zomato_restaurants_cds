@@ -6,7 +6,7 @@
   
   Cenário fictício usado para criação do dashboard para o projeto.
   
-  **Link para acessar o dashboard > https://zomato-restaurants-cds.streamlit.app/Cuisines**
+  **Link para acessar o dashboard > https://zomato-restaurants-cds.streamlit.app/**
   
   ### **Indíce:**
   
@@ -174,7 +174,7 @@
 
 ### 5. O produto final do projeto
   Um conjunto de paineis interativose  online, hospedado em um Cloud e disponível para acesso em qualquer dispositivo conectado à internet.<br>
-  O painel pode ser acessado através desse link: https://zomato-restaurants-cds.streamlit.app/Cuisines
+  O painel pode ser acessado através desse link: https://zomato-restaurants-cds.streamlit.app/
   
 ### 6. Conclusão
   O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas
